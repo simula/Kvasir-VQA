@@ -54,7 +54,7 @@ The generated Q/A pairs along with the generated answers for each (image, questi
 ## Synthetic Medical Image Generation
 Stable Diffusion 3 fine-tuning with DreamBooth/ LoRA:
 
-`python imagen/fine_tune_dreambooth_lora_sd3.py --pretrained_model_name_or_path=stabilityai/stable-diffusion-3-medium-diffusers --dataset_name=wait-whoami/ImageCLEFmed-MEDVQA-GI-2024-Dev_mod --instance_prompt XXX --caption_column caption --report_to wandb --resolution=512 --train_batch_size=48 --gradient_accumulation_steps=1 --gradient_checkpointing --mixed_precision=fp16 --num_train_epochs=80 --optimizer=prodigy --learning_rate=1.0 --allow_tf32 --weighting_scheme=logit_normal --lr_scheduler=constant --validation_prompt="Generate an image with a polyp located in the center-right." --validation_epochs=1 --lr_warmup_steps=0 --seed=0 --rank 128 --checkpoints_total_limit=20 --output_dir=MEDVQA_SD3_db_lora_dev`
+`python imagen/fine_tune_dreambooth_lora_sd3.py --pretrained_model_name_or_path=stabilityai/stable-diffusion-3-medium-diffusers --dataset_name=SushantGautam/ImageCLEFmed-MEDVQA-GI-2024-Dev_mod --instance_prompt XXX --caption_column caption --report_to wandb --resolution=512 --train_batch_size=48 --gradient_accumulation_steps=1 --gradient_checkpointing --mixed_precision=fp16 --num_train_epochs=80 --optimizer=prodigy --learning_rate=1.0 --allow_tf32 --weighting_scheme=logit_normal --lr_scheduler=constant --validation_prompt="Generate an image with a polyp located in the center-right." --validation_epochs=1 --lr_warmup_steps=0 --seed=0 --rank 128 --checkpoints_total_limit=20 --output_dir=MEDVQA_SD3_db_lora_dev`
 
 local trained model path: MEDVQA_SD3_db_lora_dev/pytorch_lora_weights.safetensors
 
